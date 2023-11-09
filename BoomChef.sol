@@ -4,7 +4,6 @@ pragma solidity ^0.8.19;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./BoomBar.sol";
 import "./Boom.sol";
 
 // boom.trading
@@ -40,7 +39,7 @@ contract BoomChef is Ownable {
     mapping(uint256 => mapping(address => UserInfo)) public userInfo;
     // Total allocation points. Must be the sum of all allocation points in all pools.
     uint256 public totalAllocPoint = 0;
-    // The block number when CAKE mining starts.
+    // The block number when BOOM mining starts.
     uint256 public startTimestamp = block.timestamp;
 
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
